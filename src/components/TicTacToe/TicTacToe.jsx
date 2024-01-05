@@ -71,11 +71,11 @@ const TicTacToe = () => {
         } else {
             titleRef.current.innerHTML = `Congratulations: <img src= "${circle_icon}"> wins`;
         }
-        reset();
     }
 
     const reset = () => {
-        setLock = false;
+        setLock(false);
+        setCount(0);
         data = ["", "", "", "", "", "", "", "", ""];
         titleRef.current.innerHTML = `Tic Tac Toe in <span>React</span>`;    
         //boxArray.map((e) => {
